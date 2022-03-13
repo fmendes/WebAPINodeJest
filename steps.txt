@@ -1,0 +1,26 @@
+# initialize
+npm init -y
+
+# first run
+node src/index.js
+
+# install nodemon
+npm i -D nodemon@2
+
+# install jest (could be using Mocha, Sinon, Supertest which are faster than Jest)
+npm i -D jest@27
+
+# create jest.config.mjs
+npx jest --init
+
+# run with nodemon
+npx nodemon src/index.js
+
+# add to package.json to make jest accept imports (watchAll acts like nodemon rerunning after changes)
+    "test": "NODE_OPTIONS='--experimental-vm-modules' jest --watchAll"
+
+# run tests
+npm t
+
+# if you want to use supertest
+npm i -D supertest@6.2.2
